@@ -132,6 +132,14 @@ public class TransactionReceipt {
         return status;
     }
 
+    public boolean isStatusOK() {
+        if (null == getStatus()) {
+            return true;
+        }
+        BigInteger statusQuantity = Numeric.decodeQuantity(getStatus());
+        return BigInteger.ONE.equals(statusQuantity);
+    }
+
     public void setStatus(String status) {
         this.status = status;
     }
