@@ -9,7 +9,8 @@ dependencies {
             "com.github.jnr:jnr-unixsocket:$jnr_unixsocketVersion",
             "com.squareup.okhttp3:okhttp:$okhttpVersion",
             "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
-            "io.reactivex:rxjava:$rxjavaVersion"
+            "io.reactivex:rxjava:$rxjavaVersion",
+            "org.bouncycastle:bcprov-jdk15on:$bouncycastleVersion"
     testCompile project(path: ':crypto', configuration: 'archives'),
             "nl.jqno.equalsverifier:equalsverifier:$equalsverifierVersion"
 }
