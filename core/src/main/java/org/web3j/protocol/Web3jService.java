@@ -15,4 +15,6 @@ public interface Web3jService {
 
     <T extends Response> Future<T> sendAsync(
             Request request, Class<T> responseType);
+
+    void close() throws IOException;
 }

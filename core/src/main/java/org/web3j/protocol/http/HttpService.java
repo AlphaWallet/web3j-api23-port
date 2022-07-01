@@ -165,4 +165,7 @@ public class HttpService extends Service {
     public HashMap<String, String> getHeaders() {
         return headers;
     }
+
+    @Override
+    public void close() throws IOException {}
 }
