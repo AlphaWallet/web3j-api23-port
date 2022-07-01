@@ -51,6 +51,7 @@ import org.web3j.protocol.core.methods.response.ShhUninstallFilter;
 import org.web3j.protocol.core.methods.response.ShhVersion;
 import org.web3j.protocol.core.methods.response.Web3ClientVersion;
 import org.web3j.protocol.core.methods.response.Web3Sha3;
+import org.web3j.tx.response.EthChainId;
 
 /**
  * Core Ethereum JSON-RPC API.
@@ -198,4 +199,7 @@ public interface Ethereum {
     Request<?, ShhMessages> shhGetFilterChanges(BigInteger filterId);
 
     Request<?, ShhMessages> shhGetMessages(BigInteger filterId);
+
+    // added for backport
+    Request<?, EthChainId> ethChainId();
 }

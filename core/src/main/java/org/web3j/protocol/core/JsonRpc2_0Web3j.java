@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.concurrent.ScheduledExecutorService;
 
+import org.web3j.tx.response.EthChainId;
 import rx.Observable;
 
 import org.web3j.protocol.Web3j;
@@ -683,6 +684,11 @@ public class JsonRpc2_0Web3j implements Web3j {
                 Arrays.asList(Numeric.toHexStringWithPrefixSafe(filterId)),
                 web3jService,
                 ShhMessages.class);
+    }
+
+    @Override
+    public Request<?, EthChainId> ethChainId() {
+        return new Request<>("eth_chainId", Collections.<String>emptyList(), web3jService, EthChainId.class);
     }
 
     @Override
