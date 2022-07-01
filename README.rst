@@ -1,3 +1,7 @@
+Core Module is modified to support AW usage for API23.
+After building the jar, rename it to core-4.8.8-android.jar and place in AW libs directory for compatibility.
+=============================================================================================================
+
 .. To build this file locally ensure docutils Python package is installed and run:
    $ rst2html.py README.rst README.html
 
@@ -385,7 +389,7 @@ client admin commands for sending transactions.
 To send Ether to another party using your Ethereum wallet file:
 
 .. code-block:: java
-		
+
    Web3j web3 = Web3j.build(new HttpService());  // defaults to http://localhost:8545/
    Credentials credentials = WalletUtils.loadCredentials("password", "/path/to/walletfile");
    TransactionReceipt transactionReceipt = Transfer.sendFunds(
@@ -422,7 +426,7 @@ Using an Ethereum client's admin commands (make sure you have your wallet in the
 keystore):
 
 .. code-block:: java
-  		
+
    Admin web3j = Admin.build(new HttpService());  // defaults to http://localhost:8545/
    PersonalUnlockAccount personalUnlockAccount = web3j.personalUnlockAccount("0x000...", "a password").sendAsync().get();
    if (personalUnlockAccount.accountUnlocked()) {
