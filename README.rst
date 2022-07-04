@@ -1,6 +1,7 @@
 Core Module is modified to support AW usage for API23.
 After building the jar, rename it to core-4.8.8-android.jar and place in AW libs directory for compatibility.
-=============================================================================================================
+
+- Only build the core module and use the jar in AlphaWallet after renaming it to core-4.8.8.jar 
 
 .. To build this file locally ensure docutils Python package is installed and run:
    $ rst2html.py README.rst README.html
